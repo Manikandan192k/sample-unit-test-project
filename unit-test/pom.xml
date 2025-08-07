@@ -24,6 +24,20 @@
 <build>
         <pluginManagement>
             <plugins>
+
+                 <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.3.0</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <addClasspath>true</addClasspath>
+                        <mainClass>com.example.MainClass</mainClass> 
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
                 <!-- Surefire Plugin for test execution -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -33,4 +47,5 @@
             </plugins>
         </pluginManagement>
     </build>
+
 </project>
